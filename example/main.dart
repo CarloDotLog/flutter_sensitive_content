@@ -35,11 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SensitiveContent(
-        child: Center(
-          child: Text("Sensitive Data"),
-        ),
         publicContent: Center(
           child: Text("Public Data"),
+        ),
+        child: Center(
+          child: Text("Sensitive Data"),
         ),
       ),
     );
