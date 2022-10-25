@@ -3,6 +3,9 @@ library flutter_sensitive_content;
 import 'package:flutter/widgets.dart';
 
 class SensitiveContent extends StatefulWidget {
+  /// Protect you sensitive content with SensitiveContent widget.
+  /// It listen for AppLifecycle states, when the app goes in background switch
+  /// from child content to publicContent content.
   const SensitiveContent(
       {Key? key, required this.child, required this.publicContent})
       : super(key: key);
