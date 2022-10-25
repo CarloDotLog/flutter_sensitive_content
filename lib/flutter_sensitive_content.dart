@@ -3,6 +3,9 @@ library flutter_sensitive_content;
 import 'package:flutter/widgets.dart';
 
 class SensitiveContent extends StatefulWidget {
+  /// Protect you sensitive content with SensitiveContent widget.
+  /// It listen for AppLifecycle states, when the app goes in background switch
+  /// from child content to publicContent content.
   const SensitiveContent(
       {Key? key, required this.child, required this.publicContent})
       : super(key: key);
@@ -16,6 +19,9 @@ class SensitiveContent extends StatefulWidget {
 
 class _SensitiveContentState extends State<SensitiveContent>
     with WidgetsBindingObserver {
+  // This variable will tell you whether the application is in foreground or not.
+  bool _isInForeground = true;
+
   @override
   void initState() {
     super.initState();
@@ -28,23 +34,17 @@ class _SensitiveContentState extends State<SensitiveContent>
     super.dispose();
   }
 
-  AppLifecycleState? _notification;
-
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     debugPrint("AppLifecycleState: $state");
     setState(() {
-      _notification = state;
+      _isInForeground = (state == AppLifecycleState.resumed);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: (AppLifecycleState.paused == _notification ||
-            AppLifecycleState.inactive == _notification)
-            ? widget.publicContent
-            : widget.child);
+        child: (_isInForeground) ? widget.child : widget.publicContent);
   }
 }
-

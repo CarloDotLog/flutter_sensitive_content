@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sensitive_content/flutter_sensitive_content.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
