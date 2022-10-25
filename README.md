@@ -6,7 +6,7 @@
 
 A Flutter package for hiding the sensitive content of your app when you switch from one app to another.
 
-This way, no sensitive information is shown when the app previews.
+This way, no sensitive pieces of information are shown while the app previews.
 
 ## Features
 Protect you sensitive content with `SensitiveContent` widget. It listen for AppLifecycle states,
