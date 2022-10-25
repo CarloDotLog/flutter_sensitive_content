@@ -4,8 +4,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/CarloDotLog/flutter_sensitive_content?color=green)](https://github.com/CarloDotLog/flutter_sensitive_content)
 ![GitHub License](https://img.shields.io/github/license/CarloDotLog/flutter_sensitive_content)
 
-A Flutter package to hide the sensitive content of your app when you switch to another app. So no sensitive
-information are showed when the app previewer is showed.
+A Flutter package for hiding the sensitive content of your app when you switch from one app to another.
+
+This way, no sensitive information is shown when the app previews.
 
 ## Features
 Protect you sensitive content with `SensitiveContent` widget. It listen for AppLifecycle states,
