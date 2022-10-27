@@ -2,6 +2,8 @@ library flutter_sensitive_content;
 
 import 'package:flutter/widgets.dart';
 
+import 'lazy_indexed_stack.dart';
+
 class SensitiveContent extends StatefulWidget {
   /// Protect you sensitive content with SensitiveContent widget.
   /// It listen for AppLifecycle states, when the app goes in background switch
@@ -44,7 +46,9 @@ class _SensitiveContentState extends State<SensitiveContent>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: (_isInForeground) ? widget.child : widget.publicContent);
+    return LazyIndexedStack(
+      index: _isInForeground ? 0 : 1,
+      children: [widget.child, widget.publicContent],
+    );
   }
 }
