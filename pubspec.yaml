@@ -10,7 +10,7 @@ platforms:
   ios:
 
 environment:
-  sdk: ">=2.18.2 <3.0.0"
+  sdk: '>=3.1.4 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
@@ -20,7 +20,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
+  flutter_lints: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
