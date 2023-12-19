@@ -15,7 +15,7 @@ when the app goes in background switch from `child` content to `publicContent` c
 ## Getting started
 Add this package to your yaml file 
 ```yaml
-flutter_sensitive_content: 0.0.1
+flutter_sensitive_content: 0.0.3
 ```
 or exec this command:
 ```bash
