@@ -36,11 +36,33 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SensitiveContent(
-        publicContent: Center(
-          child: Text("Public Data"),
+        publicContent: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: 8,
+          children: [
+            Icon(
+              Icons.lock,
+              size: 48,
+            ),
+            Center(
+              child: Text("Public Data"),
+            ),
+          ],
         ),
-        child: Center(
-          child: Text("Sensitive Data"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: 8,
+          children: [
+            Icon(
+              Icons.rocket_launch,
+              size: 48,
+            ),
+            Center(
+              child: Text("Sensitive Data"),
+            ),
+          ],
         ),
       ),
     );

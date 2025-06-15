@@ -1,6 +1,6 @@
 name: flutter_sensitive_content
 description: A Flutter package for hiding the sensitive content of your app when you switch from one app to another. This way, no sensitive pieces of information are shown while the app previews.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/CarloDotLog/flutter_sensitive_content
 repository: https://github.com/CarloDotLog/flutter_sensitive_content
 
@@ -8,6 +8,8 @@ repository: https://github.com/CarloDotLog/flutter_sensitive_content
 platforms:
   android:
   ios:
+  web:
+  macos:
 
 environment:
   sdk: '>=3.1.4 <4.0.0'
@@ -20,7 +22,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,3 +1,3 @@
-library flutter_sensitive_content;
+library;
 
 export 'src/sensitive_data.dart';
